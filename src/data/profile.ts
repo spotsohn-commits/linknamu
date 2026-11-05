@@ -13,13 +13,13 @@ export type LinkItem = {
 };
 
 export const profile: Profile = {
-  name: "김룰로",
-  bio: "세계최강 바이브코더",
-  imageUrl: "/profile-placeholder.svg",
+  name: "손성훈",
+  bio: "풀스택 조향사/산업안전산업기사(필기합격) | 요즘에는 AI 개발에 관심이 많아요",
+  imageUrl: "/profile.jpg",
 };
 
 export const links: LinkItem[] = [
   { id: "github", title: "GitHub", url: "https://github.com" },
   { id: "linkedin", title: "LinkedIn", url: "https://www.linkedin.com" },
-  { id: "blog", title: "Blog", url: "https://example.com" },
+  { id: "blog", title: "📝 Blog", url: "https://blog.naver.com/spot_korea" },
 ];

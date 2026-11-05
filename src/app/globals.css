@@ -1,26 +1,56 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fdf8f1;
+  --foreground: #3b2f2a;
+  --muted: #8a776c;
+  --bg-from: #fdf8f1; /* 크림 */
+  --bg-via: #fcebdc;
+  --bg-to: #f9d9c4; /* 연한 살구 */
+  --glass: rgb(255 255 255 / 0.45);
+  --glass-hover: rgb(255 255 255 / 0.65);
+  --glass-border: rgb(255 255 255 / 0.7);
+  --ring: rgb(255 255 255 / 0.9);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-muted: var(--muted);
+  --color-glass: var(--glass);
+  --color-glass-hover: var(--glass-hover);
+  --color-glass-border: var(--glass-border);
+  --color-ring-soft: var(--ring);
+  --font-sans:
+    "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+    system-ui, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1f1915;
+    --foreground: #f5ebe3;
+    --muted: #b8a597;
+    --bg-from: #1f1915;
+    --bg-via: #2a201a;
+    --bg-to: #3a2a20;
+    --glass: rgb(255 255 255 / 0.06);
+    --glass-hover: rgb(255 255 255 / 0.1);
+    --glass-border: rgb(255 255 255 / 0.12);
+    --ring: rgb(255 255 255 / 0.15);
   }
 }
 
 body {
-  background: var(--background);
+  min-height: 100dvh;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+  background-image:
+    radial-gradient(60rem 40rem at 85% -10%, var(--bg-to), transparent 70%),
+    linear-gradient(170deg, var(--bg-from) 0%, var(--bg-via) 55%, var(--bg-to) 100%);
+  background-attachment: fixed;
+  font-family: var(--font-sans);
+  letter-spacing: -0.01em;
+  word-break: keep-all;
 }
